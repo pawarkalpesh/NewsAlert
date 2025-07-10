@@ -6,7 +6,8 @@ const Navflex = ({ category }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const apiKey = "ee020f71a148fbe3be62141fe93275a2"; // Your actual API key
+    
+    const apiKey = process.env.REACT_APP_GNEWS_API_KEY; // Your actual API key
     const url = `https://gnews.io/api/v4/top-headlines?category=${category}&lang=en&country=us&max=10&apikey=${apiKey}`;
 
     setLoading(true);
